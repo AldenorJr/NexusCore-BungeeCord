@@ -1,0 +1,15 @@
+name: VeantyCore
+author: Nexus
+version: 1.0.0
+main: br.com.nexus.plugin.Main
+commands:
+  s:
+    aliases: [sc]
+  ss:
+    aliases: [ss, superior]
+  alerta:
+    aliases: [alert ,anuncio]
+  staff:
+    aliases: [equipe]
+  lobby:
+  online:
