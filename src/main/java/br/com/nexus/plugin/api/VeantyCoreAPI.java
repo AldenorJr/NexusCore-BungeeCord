@@ -3,6 +3,7 @@ package br.com.nexus.plugin.api;
 import br.com.nexus.plugin.cache.CacheBungee;
 import br.com.nexus.plugin.object.TagModel;
 import br.com.nexus.plugin.util.TagUtil;
+import lombok.SneakyThrows;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 public class VeantyCoreAPI {
@@ -14,6 +15,12 @@ public class VeantyCoreAPI {
             }
         }
         return new TagModel("§7", "Z", "tag.default");
+    }
+
+    @SneakyThrows
+    public String getPrefixServer(String server) {
+        if(CacheBungee.servidorPrefix.containsKey(server)) return CacheBungee.servidorPrefix.get(server);
+        return server;
     }
 
 }

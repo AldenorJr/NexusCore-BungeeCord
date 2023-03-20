@@ -30,7 +30,7 @@ public class CommandStaff extends Command {
         if(commandSender instanceof ProxiedPlayer) {
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
             if(CacheBungee.servidoresListIgnore.contains(player.getServer().getInfo().getName())) return;
-            if (!player.hasPermission(configurationFile.getConfig().getString("Staff-patrao"))) {
+            if (!player.hasPermission(configurationFile.getConfig().getString("Staff-listar"))) {
                 player.sendMessage(textComponentUtil.createTextComponent("§cVocê não pode executar esse comando"));
                 return;
             }
