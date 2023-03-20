@@ -21,7 +21,7 @@ public class TagUtil {
 
     public TagModel getCargoProxiedPlayer(ProxiedPlayer player) {
         for(TagModel tagModel : CacheBungee.tagModelArrayList) {
-            if (player.hasPermission(tagModel.tag)) {
+            if (player.hasPermission(tagModel.getPermission())) {
                 return tagModel;
             }
         }

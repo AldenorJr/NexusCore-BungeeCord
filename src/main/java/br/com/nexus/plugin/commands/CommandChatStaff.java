@@ -55,7 +55,7 @@ public class CommandChatStaff extends Command {
 
         String send_message = getMessageSend(constructorMessage, msg.toString(), player);
 
-        for (ProxiedPlayer proxiedPlayer : CacheBungee.superioresList) {
+        for (ProxiedPlayer proxiedPlayer : CacheBungee.staffList) {
             if(CacheBungee.servidoresListIgnore.contains(proxiedPlayer.getServer().getInfo().getName())) continue;
             proxiedPlayer.sendMessage(textComponentUtil.createTextComponent(send_message));
         }
