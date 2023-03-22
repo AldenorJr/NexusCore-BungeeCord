@@ -17,10 +17,13 @@ public class VeantyCoreAPI {
         return new TagModel("§7", "Z", "tag.default");
     }
 
-    @SneakyThrows
     public String getPrefixServer(String server) {
         if(CacheBungee.servidorPrefix.containsKey(server)) return CacheBungee.servidorPrefix.get(server);
         return server;
+    }
+
+    public Boolean isIgnoreServer(String server) {
+        return CacheBungee.servidoresListIgnore.contains(server);
     }
 
 }
