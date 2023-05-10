@@ -38,14 +38,25 @@ public class ConfigurationFile {
         if(!configuration.contains("Staff-permission")) setDefaultStaff(configuration);
         if(!configuration.contains("Staff-patrao")) setDefaultPatrao(configuration);
         if(!configuration.contains("Staff-listar")) setDefaultListar(configuration);
+        if(!configuration.contains("Staff-tpb")) setDefaultTPB(configuration);
+        if(!configuration.contains("Staff-killall")) setDefaultKillAll(configuration);
+        if(!configuration.contains("Staff-motd")) setDefaultMotd(configuration);
         if(!configuration.contains("Lobbys")) setDefaultLobby(configuration);
         if(!configuration.contains("Server")) setDefaultServer(configuration);
         if(!configuration.contains("Online")) setDefaultOnline(configuration);
         if(!configuration.contains("Ignore-server")) setIgnoreServer(configuration);
     }
 
+    private void setDefaultMotd(Configuration configuration) {
+        configuration.set("Staff-motd", "VeantyCore.motd");
+    }
+
     private void setDefaultAnuncio(Configuration configuration) {
         configuration.set("Anuncio-permission", "VeantyCore.anuncio");
+    }
+
+    private void setDefaultKillAll(Configuration configuration) {
+        configuration.set("Staff-KillAll", "NexusCore.KillAll");
     }
 
     private void setIgnoreServer(Configuration configuration) {
@@ -62,6 +73,10 @@ public class ConfigurationFile {
 
     private void setDefaultListar(Configuration configuration) {
         configuration.set("Staff-listar", "VeantyCore.listar");
+    }
+
+    private void setDefaultTPB(Configuration configuration) {
+        configuration.set("Staff-TPB", "VeantyCore.TPB");
     }
 
     private void setDefaultLobby(Configuration configuration) {

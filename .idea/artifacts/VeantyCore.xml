@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="VeantyCore">
-    <output-path>$USER_HOME$/Desktop</output-path>
-    <root id="archive" name="VeantyCore.jar">
-      <element id="module-output" name="VeantyCore-Bungeecord" />
-    </root>
-  </artifact>
-</component>

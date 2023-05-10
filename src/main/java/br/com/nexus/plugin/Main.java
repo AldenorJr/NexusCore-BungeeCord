@@ -22,7 +22,7 @@ public class Main extends Plugin {
     private final TagUtil tagUtil = new TagUtil(configurationFile);
     private final IgnoreServer ignoreServer = new IgnoreServer(configurationFile);
     private final OnlineList onlineList = new OnlineList(configurationFile);
-    public String prefixPlugin = "§4[VeantyCore-Bungeecord] ";
+    public String prefixPlugin = "§4[NexusCore-Bungeecord] ";
 
     @SneakyThrows
     @Override
@@ -54,6 +54,8 @@ public class Main extends Plugin {
 
     public void registerCommand() {
         getProxy().getPluginManager().registerCommand(this, new CommandAlerta(textComponentUtil, configurationFile));
+        getProxy().getPluginManager().registerCommand(this, new CommandTPB(textComponentUtil, configurationFile));
+        getProxy().getPluginManager().registerCommand(this, new CommandKillAll(textComponentUtil, configurationFile, this, serverPrefix));
         getProxy().getPluginManager().registerCommand(this, new CommandLobby(textComponentUtil, serverPrefix, this));
         getProxy().getPluginManager().registerCommand(this, new CommandPatrao(textComponentUtil, tagUtil, configurationFile));
         getProxy().getPluginManager().registerCommand(this, new CommandSuperiores(configurationFile, textComponentUtil, tagUtil, serverPrefix));
