@@ -48,11 +48,11 @@ public class ConfigurationFile {
     }
 
     private void setDefaultMotd(Configuration configuration) {
-        configuration.set("Staff-motd", "VeantyCore.motd");
+        configuration.set("Staff-motd", "NexusCore.motd");
     }
 
     private void setDefaultAnuncio(Configuration configuration) {
-        configuration.set("Anuncio-permission", "VeantyCore.anuncio");
+        configuration.set("Anuncio-permission", "NexusCore.anuncio");
     }
 
     private void setDefaultKillAll(Configuration configuration) {
@@ -64,19 +64,17 @@ public class ConfigurationFile {
     }
 
     private void setDefaultOnline(Configuration configuration) {
-        configuration.set("Online.rankup-nordic", "nordic");
-        configuration.set("Online.rankup-nordic-mina", "mina");
-        configuration.set("Online.rankup-nordic-pesca", "pesca");
+        configuration.set("Online.rankup", "rankup");
         configuration.set("Online.lobby1", "lobby1");
         configuration.set("Online.lobby2", "lobby2");
     }
 
     private void setDefaultListar(Configuration configuration) {
-        configuration.set("Staff-listar", "VeantyCore.listar");
+        configuration.set("Staff-listar", "NexusCore.listar");
     }
 
     private void setDefaultTPB(Configuration configuration) {
-        configuration.set("Staff-TPB", "VeantyCore.TPB");
+        configuration.set("Staff-TPB", "NexusCore.TPB");
     }
 
     private void setDefaultLobby(Configuration configuration) {
@@ -85,15 +83,15 @@ public class ConfigurationFile {
     }
 
     private void setDefaultStaff(Configuration configuration) {
-        configuration.set("Staff-permission", "VeantyCore.staff");
+        configuration.set("Staff-permission", "NexusCore.staff");
     }
 
     private void setDefaultPatrao(Configuration configuration) {
-        configuration.set("Staff-patrao", "VeantyCore.patrao");
+        configuration.set("Staff-patrao", "NexusCore.patrao");
     }
 
     private void setDefaultSuperiores(Configuration configuration) {
-        configuration.set("Superiores-permission", "VeantyCore.superiores");
+        configuration.set("Superiores-permission", "NexusCore.superiores");
     }
 
     private void setDefaultGroup(Configuration configuration) {
@@ -104,12 +102,10 @@ public class ConfigurationFile {
     }
 
     private void setDefaultServer(Configuration configuration) {
-        setConfigurationServer("lobby1", "lobby-1", "Lobby-1", configuration);
-        setConfigurationServer("lobby2", "lobby-2", "Lobby-2", configuration);
-        setConfigurationServer("mina-nordic", "mina", "R. Nordic [Mina]", configuration);
-        setConfigurationServer("pesca-nordic", "pesca", "R. Nordic [Pesca]", configuration);
-        setConfigurationServer("nordic_server", "nordic", "R. Nordic", configuration);
-        setConfigurationServer("survival_server", "survival", "Survival", configuration);
+        setConfigurationServer("lobby1", "lobby1", "Saguão #1", configuration);
+        setConfigurationServer("lobby2", "lobby2", "Saguão #2", configuration);
+        setConfigurationServer("rankup", "rankup", "RankUP", configuration);
+        setConfigurationServer("survival", "survival", "Survival", configuration);
     }
 
     private void setConfigurationServer(String keyName, String serverName, String serverPrefix, Configuration configuration) {
